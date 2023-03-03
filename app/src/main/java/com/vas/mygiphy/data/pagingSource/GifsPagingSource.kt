@@ -1,6 +1,5 @@
 package com.vas.mygiphy.data.pagingSource
 
-import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.vas.mygiphy.data.model.GifData

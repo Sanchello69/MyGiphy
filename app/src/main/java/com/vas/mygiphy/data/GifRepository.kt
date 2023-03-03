@@ -1,10 +1,8 @@
 package com.vas.mygiphy.data
 
-import androidx.lifecycle.LiveData
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import androidx.paging.liveData
 import com.vas.mygiphy.data.model.GifData
 import com.vas.mygiphy.data.network.GifApi
 import com.vas.mygiphy.data.pagingSource.GifsPagingSource

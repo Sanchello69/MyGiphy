@@ -1,27 +1,15 @@
 package com.vas.mygiphy.presentation.detailsGif
 
-import android.content.Context
-import android.os.Build
 import android.os.Bundle
-import android.text.method.LinkMovementMethod
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import coil.load
-import com.vas.mygiphy.R
-import com.vas.mygiphy.appComponent
-import com.vas.mygiphy.data.model.GifData
 import com.vas.mygiphy.databinding.FragmentDetailsGifBinding
-import com.vas.mygiphy.databinding.FragmentGifsBinding
-import com.vas.mygiphy.presentation.listGif.GifsViewModel
-import com.vas.mygiphy.presentation.listGif.GifsViewModelFactory
 import kotlinx.android.synthetic.main.card_text_view.view.*
-import javax.inject.Inject
 
 class DetailsGifFragment : Fragment() {
 

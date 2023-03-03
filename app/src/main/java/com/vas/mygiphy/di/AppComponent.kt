@@ -1,6 +1,5 @@
 package com.vas.mygiphy.di
 
-import com.vas.mygiphy.presentation.detailsGif.DetailsGifFragment
 import com.vas.mygiphy.presentation.listGif.GifsFragment
 import dagger.Component
 

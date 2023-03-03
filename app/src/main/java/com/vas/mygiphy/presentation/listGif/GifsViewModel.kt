@@ -1,14 +1,11 @@
 package com.vas.mygiphy.presentation.listGif
 
-import android.util.Log
 import androidx.lifecycle.*
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.vas.mygiphy.data.GifRepository
 import com.vas.mygiphy.data.model.GifData
 import kotlinx.coroutines.*
-import kotlinx.coroutines.channels.BroadcastChannel
-import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 
