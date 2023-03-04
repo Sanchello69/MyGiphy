@@ -2,14 +2,13 @@ package com.vas.mygiphy.presentation.listGif
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import com.vas.mygiphy.R
 import com.vas.mygiphy.data.model.GifData
 import com.vas.mygiphy.databinding.GifItemBinding
+import com.vas.mygiphy.utils.loadGif
 
 class GifsAdapter(private val onClick: (item: GifData) -> Unit) :
     PagingDataAdapter<GifData, GifsAdapter.ViewHolder>(DiffUtilCallBack) {
@@ -31,30 +30,12 @@ class GifsAdapter(private val onClick: (item: GifData) -> Unit) :
 
         fun bind(item: GifData) {
 
-            fun loadGif(){
-                binding.gifView.load(item.images.gifUrl.url){
-                    crossfade(true)
-                    listener(
-                        onStart = {
-                            binding.apply {
-                                progressBar.isVisible = true
-                                buttonError.isVisible = false
-                            }
-                        },
-                        onSuccess = { _, _ ->
-                            binding.apply {
-                                progressBar.isVisible = false
-                                buttonError.isVisible = false
-                            }
-                        },
-                        onError = { _, _ ->
-                            binding.apply {
-                                progressBar.isVisible = false
-                                buttonError.isVisible = true
-                            }
-                        }
-                    )
-                }
+            fun loadGif() {
+                binding.gifView.loadGif(
+                    url = item.images.gifUrl.url,
+                    progressBar = binding.progressBar,
+                    buttonError = binding.buttonError
+                )
             }
 
             loadGif()

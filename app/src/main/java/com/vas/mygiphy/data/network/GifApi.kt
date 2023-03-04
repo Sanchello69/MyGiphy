@@ -20,12 +20,4 @@ interface GifApi {
         @Query("api_key") apiKey: String = API_KEY,
     ): GifsModelData
 
-// можно потом отображать случайную гифку пока запрос пустой
-//    @GET("random")
-//    suspend fun getRandomGif(
-//        @Query("api_key") apiKey: String = "F60MFFt3kDsd6aYb8Pe27VQtP77fKqgL",
-//        @Query("tag") tag: String = "",
-//        @Query("tag") rating: String = "g"
-//    ): ListGifModelData
-
 }
